@@ -3,6 +3,8 @@ import 'package:course_app/models/course.dart';
 import 'package:course_app/screens/detail/detail.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants/fonts.dart';
+
 class CourseItem extends StatelessWidget {
   final Course course;
   CourseItem(this.course);
@@ -16,7 +18,7 @@ class CourseItem extends StatelessWidget {
             height: 250,
             width: 250,
             decoration: BoxDecoration(
-                color: kPrimaryLight, borderRadius: BorderRadius.circular(20)),
+                color: kBackground2, borderRadius: BorderRadius.circular(20)),
             child: Column(
               children: [
                 Expanded(
@@ -41,7 +43,7 @@ class CourseItem extends StatelessWidget {
                             SizedBox(width: 5),
                             Text(
                               course.author,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: smallHeaderStyle,
                             )
                           ],
                         ),
@@ -50,10 +52,7 @@ class CourseItem extends StatelessWidget {
                           children: [
                             Text(
                               course.title,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: kFont),
+                              style: smallHeaderStyle,
                             ),
                             Container(
                               margin: EdgeInsets.symmetric(horizontal: 5),
@@ -91,7 +90,7 @@ class CourseItem extends StatelessWidget {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => DetailPage(course)));
               },
-              child: Text('Start'),
+              child: Text('Start' , style: smallHeaderStyleWhite,),
             ),
           )
         ],

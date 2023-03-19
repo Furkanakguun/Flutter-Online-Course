@@ -1,6 +1,8 @@
 import 'package:course_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants/fonts.dart';
+
 class CategoryTitle extends StatelessWidget {
   final String leftText;
   final String rightText;
@@ -14,8 +16,7 @@ class CategoryTitle extends StatelessWidget {
         children: [
           Text(
             leftText,
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 20, color: kFont),
+            style: headerStyle,
           ),
           Text(
             rightText,

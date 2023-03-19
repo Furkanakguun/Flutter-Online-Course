@@ -8,10 +8,10 @@ class Course {
 
   static List<Course> generateCourses() {
     return [
-      Course('Luma Lanari', 'assets/icons/avatar01.png', 'Plant',
-          'assets/images/course01.png'),
-      Course('Daniel Dia', 'assets/icons/avatar02.png', 'Mushroom',
-          'assets/images/course02.png'),
+      Course('Luma Lanari', 'assets/icons/avatar01.png', 'Draw',
+          'assets/images/course04.jpg'),
+      Course('Daniel Dia', 'assets/icons/avatar02.png', 'Plant',
+          'assets/images/course05.jpg'),
     ];
   }
 }
